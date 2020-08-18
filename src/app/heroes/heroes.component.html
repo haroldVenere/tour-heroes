@@ -1,0 +1,12 @@
+<h2>Mes heroes</h2>
+
+<ul class="heroes">
+    <li *ngFor="let a of heroes" (click)="onClick(a.id, a.name)" [class.selected]="(selectedHero !== null) && a.id === selectedHero.newId">
+        <span class="badge">{{a.id}}</span>
+        {{a.name}}
+    </li>
+</ul>
+
+<app-hero-detail [getHeroeId]="showHeroeId" [getHeroeName]= "showHeroeName" *ngIf="showHeroe"></app-hero-detail> 
+
+
